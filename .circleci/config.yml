@@ -27,7 +27,7 @@ jobs:
           command: |
             . helloworld/bin/activate
             pyinstaller -F hello_world.py
-            docker build -t siyka/$IMAGE_NAME:$TAG .s
+            docker build -t siyka/$IMAGE_NAME:$TAG .
             docker login -u $DOCKER_USER -p $DOCKER_PASS
             docker push siyka/$IMAGE_NAME:$TAG
       # - run:
